@@ -1,0 +1,8 @@
+DELIMITER $$
+CREATE PROCEDURE pr01() 
+BEGIN
+DECLARE cursor_basico CURSOR FOR SELECT CodProf FROM ProfTurma WHERE CodDepto = 'INF01' AND COUNT(AnoSem) > 0;
+END $$
+DELIMITER ;
+
+CALL pr01();
